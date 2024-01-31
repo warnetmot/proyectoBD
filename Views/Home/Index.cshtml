@@ -1,0 +1,98 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #964b00, #f9f6f2);
+        }
+
+        .welcome-container {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to bottom, #964b00, #f9f6f2); 
+            color: black; /* Color del texto */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        .display-4 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .display-4 + .display-4 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            color: #ffffff;
+            background-color: #964b00; 
+            border: 2px solid #964b00; 
+        }
+
+        .btn-info {
+            color: #fffff;
+            background-color: #8f715b; 
+            border: 2px solid #8f715b; 
+        }
+
+        .btn:hover {
+            filter: brightness(90%);
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center welcome-container">
+        <h1 class="display-4">BIENVENIDO A LA PANADERÍA SPIGADELI</h1>
+        <br /> 
+        <h3 class="display-4"> Base de Datos</h3>
+        <p>
+            <br />
+            <br />
+             <p>
+            <h1 class="display-4">Descubre nuestra deliciosa variedad de panes y pasteles. ¡Visítanos y aprovecha nuestras ofertas especiales esta semana!</h1>
+             </p>
+
+            <br />
+            <br />
+            <footer>
+            <section class="social-media">
+                <p><h1 class="display-4"> Síguenos en: </h1></p>
+                <a href="#" target="_blank" class="btn btn-primary">Facebook</a>
+                <a href="#" target="_blank" class="btn btn-info">Instagram</a>
+            </section>
+            </footer>
+            
+        </p>
+    </div>
+</body>
+</html>
+
+</html>

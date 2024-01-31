@@ -1,0 +1,120 @@
+﻿@model IEnumerable<proyectoBD.Models.Empleado>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+
+    <style>
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+            .table th, .table td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+
+            .table tbody tr:nth-child(odd) {
+                background-color: #f2f2f2;
+            }
+
+
+            .table th {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+
+        .btn {
+            padding: 6px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .btn-warning {
+            background-color: #f0ad4e;
+            color: #fff;
+        }
+
+        .btn-primary {
+            background-color: #337ab7;
+            color: #fff;
+        }
+
+        .btn-danger {
+            background-color: #d9534f;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<h1>EMPLEADOS</h1>
+
+<p>
+    <a asp-action="Create">Crear Nuevo Empleado</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApellidoPrimero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApellidoSegundo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cargo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salario)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApellidoPrimero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApellidoSegundo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cargo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salario)
+            </td>
+            <td> 
+                <a asp-action="Edit" class= "btn btn-warning" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.Id">Detalles</a> |
+                    <a asp-action="Delete" class="btn btn-danger"  asp-route-id="@item.Id">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>
